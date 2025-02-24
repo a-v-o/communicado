@@ -4,8 +4,6 @@ import serverless from "serverless-http";
 var app = express();
 var expressWs = require("express-ws")(app);
 
-export const handler = serverless(app);
-
 app.use(function (req, res, next) {
   console.log("middleware");
   req.testing = "testing";
@@ -31,3 +29,5 @@ app.ws("/", function (ws, req) {
 });
 
 app.listen(3000);
+
+export const handler = serverless(app);
