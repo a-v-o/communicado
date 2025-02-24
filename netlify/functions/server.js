@@ -1,10 +1,9 @@
 const path = require("path");
 const express = require("express");
 const serverless = require("serverless-http");
-const expressWs = require("express=ws");
+const expressWs = require("express=ws")(app);
 
 const app = express();
-const expressWs = expressWs(app);
 
 app.use(express.static("public"));
 
