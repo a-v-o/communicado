@@ -1,6 +1,10 @@
-var express = require("express");
+import express from "express";
+import serverless from "serverless-http";
+
 var app = express();
 var expressWs = require("express-ws")(app);
+
+export const handler = serverless(app);
 
 app.use(function (req, res, next) {
   console.log("middleware");
