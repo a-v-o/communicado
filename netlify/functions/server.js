@@ -1,7 +1,7 @@
-import path from "path";
-import express from "express";
-import serverless from "serverless-http";
-import expressWs from "express-ws";
+const path = require("path");
+const express = require("express");
+const serverless = require("serverless-http");
+const expressWs = require("express=ws");
 
 const app = express();
 const expressWs = expressWs(app);
